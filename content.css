@@ -1,0 +1,91 @@
+.ytp-volume-area {
+  overflow: visible !important;
+  position: relative !important;
+  flex: 0 0 auto !important;
+  transition: padding-right .15s ease;
+}
+
+/* Expand the existing YouTube pill to make room inside it for the value. */
+.ytp-volume-area:hover,
+.ytp-volume-area:has(.yt-precise-volume:focus-within) {
+  padding-right: 72px !important;
+}
+
+.yt-precise-volume {
+  align-items: center;
+  background: transparent;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex: none;
+  gap: 2px;
+  height: 48px;
+  justify-content: center;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  left: auto;
+  padding-left: 6px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity .12s ease;
+  visibility: hidden;
+  width: 68px;
+  justify-content: flex-start;
+  gap: 0;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  z-index: 10000;
+  text-shadow: 0 0 2px #000;
+  white-space: nowrap;
+}
+
+.ytp-volume-area:hover > .yt-precise-volume,
+.yt-precise-volume:hover,
+.yt-precise-volume:focus-within {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+/* Keep the complete control row visible while the volume field has focus. */
+#movie_player.ytpv-focus-lock .ytp-chrome-bottom,
+#movie_player.ytpv-focus-lock .ytp-chrome-controls,
+#movie_player.ytpv-focus-lock .ytp-gradient-bottom {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+.yt-precise-volume input {
+  align-self: center;
+  background: transparent;
+  border: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font: 500 14px/26px Roboto, Arial, sans-serif;
+  height: 26px;
+  min-width: 0;
+  padding: 0 4px;
+  text-align: right;
+  width: 40px;
+}
+
+.yt-precise-volume input:focus { outline: none; }
+
+.yt-precise-volume input::-webkit-inner-spin-button,
+.yt-precise-volume input::-webkit-outer-spin-button {
+  transform: scale(.7);
+  transform-origin: center;
+  margin: 0 -7px 0 0;
+}
+
+.yt-precise-volume span {
+  align-self: center;
+  color: #fff;
+  font: 500 14px/26px Roboto, Arial, sans-serif;
+  padding-right: 0;
+}
