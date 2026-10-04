@@ -11,14 +11,15 @@
 
 ### 방법 1
 1. 이 저장소를 내려받거나 복제합니다.
-2. Chrome에서 `chrome://extensions`를 엽니다.
-3. **개발자 모드**를 켭니다.
-4. **압축해제된 확장 프로그램을 로드**를 선택하고 프로젝트 폴더를 지정합니다.
+2. 압축을 해제합니다.
+3. Chrome에서 `chrome://extensions`를 엽니다.
+4. **개발자 모드**를 켭니다.
+5. **압축해제된 확장 프로그램을 로드**를 선택하고 프로젝트 폴더를 지정합니다.
 
-### 방법 2
-1. [다운로드](https://github.com/zzansalt/YPV/releases)에서 최신 파일을 다운 받습니다.
-2. Chrome에서 `chrome://extensions`를 엽니다.
-3. 파일을 드래그 앤 드롭 합니다.
+~~### 방법 2~~
+~~1. [다운로드](https://github.com/zzansalt/YPV/releases)에서 최신 파일을 다운 받습니다.~~
+~~2. Chrome에서 `chrome://extensions`를 엽니다.~~
+~~3. 파일을 드래그 앤 드롭 합니다.~~
 
 ## 사용법
 
