@@ -97,7 +97,22 @@
     panel.className = PANEL_CLASS;
     panel.setAttribute('role', 'group');
     panel.setAttribute('aria-label', 'Precise volume control');
-    panel.innerHTML = '<input type="number" min="0" max="100" step="1" inputmode="numeric" aria-label="Volume percentage"><span aria-hidden="true">%</span>';
+    panel.innerHTML = '<button class="yt-precise-volume-adjust" type="button" data-adjust="-1" aria-label="Decrease volume">−</button><input type="number" min="0" max="100" step="1" inputmode="numeric" aria-label="Volume percentage"><span aria-hidden="true">%</span><button class="yt-precise-volume-adjust" type="button" data-adjust="1" aria-label="Increase volume">+</button>';
+
+    panel.addEventListener('click', (event) => {
+      const button = event.target.closest('button[data-adjust]');
+      if (!button) return;
+      event.preventDefault();
+      event.stopPropagation();
+      setVolume(volumePercent() + Number(button.dataset.adjust) * volumeStep);
+    });
+
+    volumeArea.addEventListener('wheel', (event) => {
+      if (event.deltaY === 0) return;
+      event.preventDefault();
+      event.stopPropagation();
+      setVolume(volumePercent() + (event.deltaY < 0 ? volumeStep : -volumeStep));
+    }, { capture: true, passive: false });
 
     const input = panel.querySelector('input');
     input.addEventListener('input', () => {

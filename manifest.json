@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "YouTube Precise Volume",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "유튜브 플레이어에서 슬라이더뿐 아니라 숫자를 입력해 볼륨을 정확하게 조절할 수 있는 Chrome 확장 프로그램입니다.",
   "icons": {
     "128": "images/icon-128.png"
